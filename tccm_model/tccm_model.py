@@ -1,5 +1,5 @@
 # Auto generated from tccm_model.yaml by pythongen.py version: 0.9.0
-# Generation date: 2021-05-12 13:43
+# Generation date: 2021-06-17 14:53
 # Schema: tccm_model
 #
 # id: https://w3id.org/tccm_model
@@ -78,17 +78,17 @@ class ConceptReference(YAMLRoot):
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.uri):
-            raise ValueError("uri must be supplied")
+            self.MissingRequiredField("uri")
         if not isinstance(self.uri, ConceptReferenceUri):
             self.uri = ConceptReferenceUri(self.uri)
 
         if self._is_empty(self.code):
-            raise ValueError("code must be supplied")
+            self.MissingRequiredField("code")
         if not isinstance(self.code, str):
             self.code = str(self.code)
 
         if self._is_empty(self.defined_in):
-            raise ValueError("defined_in must be supplied")
+            self.MissingRequiredField("defined_in")
         if not isinstance(self.defined_in, ConceptSystemUri):
             self.defined_in = ConceptSystemUri(self.defined_in)
 
@@ -99,11 +99,11 @@ class ConceptReference(YAMLRoot):
             self.definition = str(self.definition)
 
         if not isinstance(self.reference, list):
-            self.reference = [self.reference]
+            self.reference = [self.reference] if self.reference is not None else []
         self.reference = [v if isinstance(v, URI) else URI(v) for v in self.reference]
 
         if not isinstance(self.narrower_than, list):
-            self.narrower_than = [self.narrower_than]
+            self.narrower_than = [self.narrower_than] if self.narrower_than is not None else []
         self.narrower_than = [v if isinstance(v, ConceptReferenceUri) else ConceptReferenceUri(v) for v in self.narrower_than]
 
         super().__post_init__(**kwargs)
@@ -131,12 +131,12 @@ class ConceptSystem(YAMLRoot):
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.uri):
-            raise ValueError("uri must be supplied")
+            self.MissingRequiredField("uri")
         if not isinstance(self.uri, ConceptSystemUri):
             self.uri = ConceptSystemUri(self.uri)
 
         if self._is_empty(self.prefix):
-            raise ValueError("prefix must be supplied")
+            self.MissingRequiredField("prefix")
         if not isinstance(self.prefix, str):
             self.prefix = str(self.prefix)
 
@@ -147,11 +147,11 @@ class ConceptSystem(YAMLRoot):
             self.description = str(self.description)
 
         if not isinstance(self.reference, list):
-            self.reference = [self.reference]
+            self.reference = [self.reference] if self.reference is not None else []
         self.reference = [v if isinstance(v, URI) else URI(v) for v in self.reference]
 
         if not isinstance(self.root_concept, list):
-            self.root_concept = [self.root_concept]
+            self.root_concept = [self.root_concept] if self.root_concept is not None else []
         self.root_concept = [v if isinstance(v, ConceptReferenceUri) else ConceptReferenceUri(v) for v in self.root_concept]
 
         self._normalize_inlined_as_list(slot_name="contents", slot_type=ConceptReference, key_name="uri", keyed=True)
@@ -178,7 +178,7 @@ class CodeSet(YAMLRoot):
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.uri):
-            raise ValueError("uri must be supplied")
+            self.MissingRequiredField("uri")
         if not isinstance(self.uri, CodeSetUri):
             self.uri = CodeSetUri(self.uri)
 
