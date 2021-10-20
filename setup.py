@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import sys
-from setuptools import setup
+from setuptools import setup, find_packages
 from warnings import warn
 
 if sys.version_info < (3, 7, 0):
@@ -9,5 +9,6 @@ if sys.version_info < (3, 7, 0):
 
 setup(
     setup_requires=['pbr'],
+    packages=find_packages(),
     pbr=True,
 )
