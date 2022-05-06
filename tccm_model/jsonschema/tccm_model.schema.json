@@ -1,7 +1,5 @@
 {
-   "$id": "https://w3id.org/tccm_model",
-   "$schema": "http://json-schema.org/draft-07/schema#",
-   "definitions": {
+   "$defs": {
       "CodeSet": {
          "additionalProperties": false,
          "description": "A collection of terminological concept references",
@@ -17,7 +15,7 @@
             "members": {
                "description": "The concept references that are in the CodeSet",
                "items": {
-                  "$ref": "#/definitions/ConceptReference"
+                  "$ref": "#/$defs/ConceptReference"
                },
                "type": "array"
             },
@@ -86,7 +84,7 @@
             "contents": {
                "description": "The concept references that are in the ConceptSystem",
                "items": {
-                  "$ref": "#/definitions/ConceptReference"
+                  "$ref": "#/$defs/ConceptReference"
                },
                "type": "array"
             },
@@ -134,7 +132,7 @@
          "properties": {
             "system": {
                "items": {
-                  "$ref": "#/definitions/ConceptSystem"
+                  "$ref": "#/$defs/ConceptSystem"
                },
                "type": "array"
             }
@@ -144,8 +142,14 @@
          "type": "object"
       }
    },
+   "$id": "https://w3id.org/tccm_model",
+   "$schema": "http://json-schema.org/draft-07/schema#",
+   "additionalProperties": true,
+   "metamodel_version": "1.7.0",
    "properties": {},
+   "required": [],
    "title": "tccm_model",
-   "type": "object"
+   "type": "object",
+   "version": null
 }
 
