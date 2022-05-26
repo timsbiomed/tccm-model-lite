@@ -4,6 +4,7 @@ The goal of the Terminology Core Common Model (TCCM) is to accomodate terminolog
 The TCCM model is the set of [LinkML](https://github.com/linkml/linkml)-based definitions of the data models core to TCCM. 
 
 ## Disambiguation
+#### Repository disambiguation
 Not to be confused with [TCCM Model (full spec)](https://github.com/HOT-Ecosystem/tccm).
 
 [TCCM Model (lite)](https://github.com/HOT-Ecosystem/tccm-model) is a much 
@@ -13,9 +14,7 @@ https://github.com/HOT-Ecosystem/tccm-api).
 [TCCM Model (full spec)](https://github.com/HOT-Ecosystem/tccm) is in development, 
 but is ultimately intended to supplant the existing, 'lite' version of the model.
 
----
-
-Model schema directory disambiguation:
+#### Model schema directory disambiguation
 - `tccm_model/`: This is the working, production model.
 - `model/`: This is a mixed purpose development model; ignore this directory unless you are a TCCM developer.
 
