@@ -13,6 +13,12 @@ https://github.com/HOT-Ecosystem/tccm-api).
 [TCCM Model (full spec)](https://github.com/HOT-Ecosystem/tccm) is in development, 
 but is ultimately intended to supplant the existing, 'lite' version of the model.
 
+---
+
+Model schema directory disambiguation:
+- `tccm_model/`: This is the working, production model.
+- `model/`: This is a mixed purpose development model; ignore this directory unless you are a TCCM developer.
+
 ## Documenation 
 https://HOT-Ecosystem.github.io/tccm-model/
 
